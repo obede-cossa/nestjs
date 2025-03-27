@@ -1,4 +1,4 @@
-import { isDate, isNotEmpty, IsOptional, isString } from 'class-validator';
+import { IsDate, IsNotEmpty, IsOptional, IsString } from 'class-validator';
 import { v4 as uuidv4 } from 'uuid';
 
 export class Item {
@@ -6,15 +6,15 @@ export class Item {
     @IsString()
     id: string;
 
-    @isString()
-    @isNotEmpty()
+    @IsString()
+    @IsNotEmpty()
     name: string;
 
-    @isString()
+    @IsString()
     @IsOptional()
     description?: string;
 
-    @isDate()
+    @IsDate()
     createdAt: Date;
 
     constructor() {
